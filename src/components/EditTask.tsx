@@ -65,7 +65,7 @@ const EditTask: React.FC<EditTaskProps> = ({ taskId, onClose }) => {
       </div>
 
       {/* Footer Buttons */}
-      <div className="mt-6 flex justify-between">
+      <div className="mt-6 flex justify-between p-4 space-x-8">
         {/* Delete Button */}
         {taskId !== "new" && (
           <button
@@ -76,20 +76,12 @@ const EditTask: React.FC<EditTaskProps> = ({ taskId, onClose }) => {
           </button>
         )}
 
-        <div className="flex gap-4">
-          {/* Cancel Button */}
-          <button
-            onClick={onClose}
-            className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600"
-          >
-            Cancel
-          </button>
-
+        <div className="flex-1  ">
           {/* Save Button */}
           <button
             onClick={handleSave}
             disabled={!taskName.trim()}
-            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 disabled:bg-gray-300"
+            className="bg-blue-500 text-white px-4 py-2 min-w-[500px] rounded hover:bg-blue-600 disabled:bg-gray-300"
           >
             Save
           </button>
